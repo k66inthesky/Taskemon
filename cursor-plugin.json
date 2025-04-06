@@ -1,0 +1,44 @@
+{
+    "name": "taskemon",
+    "displayName": "Taskemon",
+    "description": "療癒系ToDo夥伴 - 你的AI任務管理助手",
+    "version": "0.0.1",
+    "main": "./extension.js",
+    "activationEvents": [
+        "onCommand:taskemon.start"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "taskemon.start",
+                "title": "Start Taskemon",
+                "description": "啟動你的療癒系ToDo夥伴"
+            },
+            {
+                "command": "taskemon.viewTasks",
+                "title": "View Tasks",
+                "description": "查看任務狀態"
+            },
+            {
+                "command": "taskemon.organizeThoughts",
+                "title": "Organize Thoughts",
+                "description": "整理雜亂思緒"
+            },
+            {
+                "command": "taskemon.needMotivation",
+                "title": "Need Motivation",
+                "description": "我提不起勁"
+            },
+            {
+                "command": "taskemon.doBackflip",
+                "title": "Do Backflip",
+                "description": "我想看你後空翻"
+            },
+            {
+                "command": "taskemon.mintNFT",
+                "title": "Mint NFT",
+                "description": "將成就鑄成NFT"
+            }
+        ]
+    }
+}

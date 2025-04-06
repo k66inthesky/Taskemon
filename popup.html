@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://accounts.google.com/gsi/client https://accounts.google.com/gsi/ http://127.0.0.1:* https://apis.google.com; connect-src 'self' https://*.google.com https://accounts.google.com https://www.googleapis.com; frame-src https://*.google.com https://accounts.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
+  <title>Taskemon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <meta name="google-signin-client_id" content="663993149096-eodppj27j9td4vi8fh4ttapqdntfp8gn.apps.googleusercontent.com">
+  <style>
+    :root {
+      --bg-color: #f0f7ff;
+      --card-bg: #ffffff;
+      --text-color: #2b4c5c;
+      --text-secondary: #6c8a97;
+      --accent-color: #4a90e2;
+      --hover-color: #357abd;
+      --highlight-color: #f3d773;
+      --decorative-color: #e8c4c4;
+    }
+
+    :root[data-theme="dark"] {
+      --bg-color: #2b4c5c;
+      --card-bg: #1a2a33;
+      --text-color: #e8e6e3;
+      --text-secondary: #a8b5be;
+      --accent-color: #4a90e2;
+      --hover-color: #357abd;
+      --highlight-color: #f3d773;
+      --decorative-color: #3a4a5a;
+    }
+
+    body {
+      width: 320px;
+      min-height: 400px;
+      margin: 0;
+      padding: 16px;
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      font-size: 20px;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      opacity: 1;
+      transform: rotate(15deg);
+    }
+
+    /* 登入頁面樣式 */
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 360px;
+      text-align: center;
+    }
+
+    .login-logo {
+      font-family: monospace;
+      white-space: pre;
+      margin-bottom: 24px;
+      color: var(--text-color);
+    }
+
+    .login-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: var(--text-color);
+    }
+
+    .login-subtitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .google-signin {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border: 1px solid var(--text-secondary);
+      border-radius: 8px;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .google-signin:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-color: var(--accent-color);
+    }
+
+    .google-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Taskemon 主界面（默認隱藏） */
+    .taskemon-container {
+      display: none;
+    }
+
+    /* 當登入後顯示 */
+    .logged-in .taskemon-container {
+      display: block;
+    }
+
+    .logged-in .login-container {
+      display: none;
+    }
+
+    .taskemon-card {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .taskemon-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .taskemon-avatar {
+      font-family: monospace;
+      white-space: pre;
+      color: var(--text-color);
+    }
+
+    .taskemon-info h2 {
+      margin: 0 0 4px 0;
+      font-size: 20px;
+      color: var(--text-color);
+    }
+
+    .taskemon-info p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .message-bubble {
+      background-color: var(--decorative-color);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-color);
+    }
+
+    .button-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .action-button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .action-button:hover {
+      background-color: var(--hover-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <button class="theme-toggle" id="themeToggle">☀️</button>
+  </div>
+
+  <!-- 登入頁面 -->
+  <div class="login-container">
+    <div class="login-logo">| \--/\
+| @ @  \
+|       _ _ _
+   | | | |</div>
+    <h1 class="login-title">Taskemon</h1>
+    <p class="login-subtitle">療癒系ToDo夥伴 - 你的AI任務管理助手</p>
+    <button class="google-signin" id="googleSignIn">
+      <svg class="google-icon" viewBox="0 0 24 24">
+        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+      </svg>
+      <span>使用 Google 帳號登入</span>
+    </button>
+  </div>
+
+  <!-- Taskemon 主界面 -->
+  <div class="taskemon-container">
+    <div class="taskemon-card">
+      <div class="taskemon-header">
+        <div class="taskemon-avatar">| \--/\
+| @ @  \
+|       _ _ _
+   | | | |</div>
+        <div class="taskemon-info">
+          <h2>Taskemon</h2>
+          <p>懂你的拖延小夥伴</p>
+        </div>
+      </div>
+      <div class="message-bubble">
+        沒關係，今天也不用太勉強自己
+        想聊聊為什麼完成不了嗎？ 🫂
+      </div>
+      <div class="button-group">
+        <button class="action-button">👀 輕鬆看看進度</button>
+        <button class="action-button">🤔 理理腦思緒</button>
+        <button class="action-button">😮‍💨 就是提不起勁</button>
+        <button class="action-button">⚡️ 陪你放空</button>
+        <button class="action-button">😴 留下完成吧</button>
+        <button class="action-button">☕️ 請我喝杯咖啡</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

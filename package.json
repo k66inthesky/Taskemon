@@ -1,0 +1,79 @@
+{
+  "name": "taskemon",
+  "displayName": "Taskemon",
+  "description": "療癒系ToDo夥伴 - 你的AI任務管理助手",
+  "version": "0.0.1",
+  "publisher": "taskemon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/taskemon.git"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:taskemon.start"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "taskemon.start",
+        "title": "Start Taskemon",
+        "category": "Taskemon"
+      },
+      {
+        "command": "taskemon.viewTasks",
+        "title": "View Tasks",
+        "category": "Taskemon"
+      },
+      {
+        "command": "taskemon.organizeThoughts",
+        "title": "Organize Thoughts",
+        "category": "Taskemon"
+      },
+      {
+        "command": "taskemon.needMotivation",
+        "title": "Need Motivation",
+        "category": "Taskemon"
+      },
+      {
+        "command": "taskemon.doBackflip",
+        "title": "Do Backflip",
+        "category": "Taskemon"
+      },
+      {
+        "command": "taskemon.mintNFT",
+        "title": "Mint NFT",
+        "category": "Taskemon"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack --mode development",
+    "package": "vsce package",
+    "install-plugin": "powershell -Command \"if (!(Test-Path $env:APPDATA\\cursor\\plugins\\taskemon)) { New-Item -ItemType Directory -Path $env:APPDATA\\cursor\\plugins\\taskemon -Force }; Copy-Item dist\\*, cursor-plugin.json -Destination $env:APPDATA\\cursor\\plugins\\taskemon -Force\""
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.47.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.1.0",
+    "@onflow/fcl": "^1.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

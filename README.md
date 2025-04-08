@@ -24,7 +24,14 @@
 本項目正在參加0gXFlowXTinTinLand贊助的AI agent黑客松競賽開發中。
 
 ## 安裝方式
-
+```
+git clone https://github.com/k66inthesky/Taskemon.git
+```
+server/.env
+```
+DEEPSEEK_API_URL="https://api.deepseek.com"
+DEEPSEEK_API_KEY="" // <-- put your deepseek api key
+```
 
 ## 使用方法
 這是一個AI agent chrome plugin

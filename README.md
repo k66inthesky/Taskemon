@@ -5,7 +5,14 @@
 <img width="1437" alt="image" src="https://github.com/user-attachments/assets/5c23c957-ec40-4a7c-889a-c3a4a76c750e" />
 
 + [Demo Video on Youtube](https://youtu.be/M3RDVTMVDpE)
-  
+
+
+## 介紹
+
+這是一個AI agent chrome plugin
+當你事情做不完感到焦慮，和Taskemon聊天，讓它陪你完成任務，完成任務這麼棒的你，來紀念一下吧！Taskemon幫你一鍵鑄造NFT。
+
+
 ## 主要功能
 
 1. **整理雜亂思緒** - AI助手幫助整理和規劃任務
@@ -81,8 +88,3 @@ flow project deploy --network emulator
 ![image2](https://github.com/user-attachments/assets/3ea7f2dd-b8c1-4474-80e7-6854324be2cd)
 ![image3](https://github.com/user-attachments/assets/28e43d9d-b2b8-4dcd-9bc2-2e16fccfbab6)
 ![image4](https://github.com/user-attachments/assets/5843e793-2607-4003-a4f1-4f304e31a98f)
-
-## 使用方法
-
-這是一個AI agent chrome plugin
-當你事情做不完感到焦慮，和Taskemon聊天，讓它陪你完成任務，完成任務這麼棒的你，來紀念一下吧！Taskemon幫你一鍵鑄造NFT。

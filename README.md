@@ -23,14 +23,41 @@
 ## 開發狀態
 本項目正在參加0gXFlowXTinTinLand贊助的AI agent黑客松競賽開發中。
 
-## 安裝方式
+## Install 安裝方式
 ```
 git clone https://github.com/k66inthesky/Taskemon.git
 ```
+
 server/.env
 ```
 DEEPSEEK_API_URL="https://api.deepseek.com"
 DEEPSEEK_API_KEY="" // <-- put your deepseek api key
+```
+
+```
+npm install
+```
+
+## Execution 執行
+
+1st terminal
+```
+nodemon server/index.js
+```
+
+open 2nd terminal
+```
+nodemon server/NFT.js
+```
+
+open 3rd terminal
+```
+flow emulator start
+```
+
+open 4th terminal
+```
+flow project deplay --network emulator
 ```
 
 ## 使用方法

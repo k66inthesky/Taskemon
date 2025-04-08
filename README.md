@@ -10,7 +10,7 @@
 ## 介紹
 
 這是一個AI agent chrome plugin
-當你事情做不完感到焦慮，和Taskemon聊天，讓它陪你完成任務，完成任務這麼棒的你，來紀念一下吧！Taskemon幫你一鍵鑄造NFT。
+當你事情做不完感到焦慮，和Taskemon聊天，讓它陪你完成任務，為獎勵這麼棒的你，來紀念一下吧！Taskemon幫你一鍵鑄造NFT。
 
 
 ## 主要功能

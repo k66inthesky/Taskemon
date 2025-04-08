@@ -57,7 +57,7 @@ flow emulator start
 
 open 4th terminal
 ```
-flow project deplay --network emulator
+flow project deploy --network emulator
 ```
 
 ## 使用方法

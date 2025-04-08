@@ -34,6 +34,19 @@
 本項目正在參加0gXFlowXTinTinLand贊助的AI agent黑客松競賽開發階段性完成，未來再繼續完善。
 
 ## Install 安裝方式
+
++ 打開chrome瀏覽器
+```
+chrome://extensions/
+```
++ 載入未封裝項目
+  
+![image](https://github.com/user-attachments/assets/f274bc83-cbd3-4857-a7ee-c601ebbc5387)
+
++ 出現此畫面表示成功
+
+![image](https://github.com/user-attachments/assets/33cc0b44-5391-4719-99e4-0bbe9084a011)
+
 ```
 git clone https://github.com/k66inthesky/Taskemon.git
 ```

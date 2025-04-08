@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://localhost:3000 https://*.googleapis.com https://accounts.google.com; script-src 'self' https://apis.google.com 'unsafe-inline'; script-src-elem 'self' https://apis.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
-    <title>Taskemon</title>
+    <title>鑄造NFT</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="header">
+        <button id="homeButton">🏠 回主頁</button>
         <button id="themeToggle">☀️</button>
     </div>
     <div class="container">
@@ -22,34 +23,16 @@
                     </div>
                 </div>
                 <div class="message-bubble">
-                    沒關係，今天也不用太勉強自己<br>
-                    想聊聊為什麼完成不了嗎？ 🫂
+                    主人今天好棒！把成就鑄成NFT紀念吧！
                 </div>
                 <div class="button-group">
-                    <button class="action-button">👀 輕鬆看看進度</button>
-                    <button class="action-button">🤔 理理腦思緒</button>
-                    <button class="action-button">😮‍💨 就是提不起勁</button>
-                    <button class="action-button">⚡️ 陪你放空</button>
-                    <button class="action-button">🏆 打印成功勳章</button>
-                    <button class="action-button">☕️ 請作者喝咖啡</button>
+                    <button id="mintNFT" class="action-button">鑄造NFT</button>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        const script = document.createElement('script');
-        script.src = 'https://apis.google.com/js/api.js';
-        script.onload = function() {
-            console.log('Google API 腳本加載成功');
-            gapi.load('client', function() {
-                console.log('Google API 加載成功');
-            });
-        };
-        script.onerror = function() {
-            console.error('Google API 腳本加載失敗');
-        };
-        document.head.appendChild(script);
-    </script>
-    <script src="popup.js"></script>
+    <script src="web3.min.js"></script>
+    <script src="https://unpkg.com/@onflow/fcl/dist/fcl.min.js"></script>
+    <script src="NFT.js"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .header-button {
+            background-color: var(--button-bg, #f0f0f0);
+            color: var(--button-color, #000);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header-button:hover {
+            background-color: var(--button-hover-bg, #e0e0e0);
+        }
+        .chat-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .deepseek-message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .deepseek-text {
+            flex: 1;
+        }
+        .centered-text {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-buttons">
+        <button id="homeButton" class="header-button">🏠 回主頁</button>
+        <button id="toggleThemeButton" class="header-button">☀️</button>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">與 Taskemon 交流中 . . .</div>
+        <div class="chat-messages" id="chatMessages">
+        <div class="centered-text">這裡只有主人和Taskemon，主人可以暢所欲言～</div>
+
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="輸入訊息...">
+            <button id="sendButton">發送</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+    <script>
+        document.getElementById('homeButton').addEventListener('click', () => {
+            window.location.href = 'popup.html';
+        });
+
+        document.getElementById('toggleThemeButton').addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>

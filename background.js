@@ -29,11 +29,15 @@ function initGoogleAuth() {
           scope: 'profile email'
         }).then(
           (auth2) => resolve(auth2),
-          (error) => reject(error)
+          (error) => {
+            console.error('Google Auth Initialization Error:', error);
+            reject(new Error('Failed to initialize Google Auth. Please check the client_id configuration.'));
+          }
         );
       });
     } catch (error) {
-      reject(error);
+      console.error('Unexpected Error during Google Auth Initialization:', error);
+      reject(new Error('Unexpected error occurred during Google Auth initialization.'));
     }
   });
 }
@@ -64,4 +68,4 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
   
   return false;
-}); 
+});

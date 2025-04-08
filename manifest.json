@@ -17,23 +17,18 @@
     }
   },
   "permissions": [
-    "storage",
     "identity",
-    "identity.email"
+    "identity.email",
+    "storage"
   ],
-  "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  },
   "oauth2": {
     "client_id": "663993149096-eodppj27j9td4vi8fh4ttapqdntfp8gn.apps.googleusercontent.com",
     "scopes": [
-      "https://www.googleapis.com/auth/userinfo.profile",
-      "https://www.googleapis.com/auth/userinfo.email"
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
     ]
   },
   "host_permissions": [
-    "https://accounts.google.com/*",
     "https://www.googleapis.com/*"
   ]
 } 

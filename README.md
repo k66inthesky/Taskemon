@@ -4,13 +4,15 @@
 > 你有拖延症，你不是不行，你只是沒人理解你，讓Taskemon來陪你把事情做完!
 <img width="1437" alt="image" src="https://github.com/user-attachments/assets/5c23c957-ec40-4a7c-889a-c3a4a76c750e" />
 
+[Youtube](https://youtu.be/M3RDVTMVDpE)
 ## 主要功能
 
-1. **查看我的任務狀態** - 顯示當前任務進度和Taskemon的狀態
-2. **整理雜亂思緒** - AI助手幫助整理和規劃任務
-3. **我提不起勁** - 提供情緒支持和動力激勵
-4. **我想看你後空翻** - 互動娛樂功能
-5. **將我的成就鑄成NFT留念** - 基於Flow區塊鏈的成就NFT系統
+1. **整理雜亂思緒** - AI助手幫助整理和規劃任務
+2. 打印成功勳章 - 鑄造NFT, 目前僅實現testnet terminal，待與button綁定。
+
+3. **我提不起勁** - [待完成]提供情緒支持和動力激勵
+4. **陪你放空** - [待完成]互動娛樂功能
+5. 請作者喝咖啡 - buy me a coffee!
 
 ## 技術實現
 - Deepseek API (LLM)

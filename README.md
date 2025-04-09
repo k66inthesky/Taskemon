@@ -83,7 +83,7 @@ open 4th terminal
 flow project deploy --network emulator
 ```
 
-## 理想
+## 藍圖
 > 取自我真實問chatGPT的經驗，它聰明到我認為可以利用來搞一個ai agent專門處理拖延症患者(心理價值+一鍵安排+任務管理+鑄NFT犒賞自己)
 
 ![image](https://github.com/user-attachments/assets/b045fb44-a111-481d-bd70-fc0ab75a42db)
@@ -94,8 +94,8 @@ flow project deploy --network emulator
 
 
 
-## 現實
-> 當初為了便宜使用DeepSeek API，但蠻後悔因為它沒chatGPT聰明，待改成chatGPT API
+## 精進目標
+> 當初為了便宜使用DeepSeek API，但蠻後悔因為它沒chatGPT聰明，未來改成chatGPT API就更能聰明地幫用戶規劃和撫慰用戶。
 
 ![image1](https://github.com/user-attachments/assets/cfeb2a18-b496-4b8a-a159-dc2bd06b3775)
 ![image2](https://github.com/user-attachments/assets/3ea7f2dd-b8c1-4474-80e7-6854324be2cd)

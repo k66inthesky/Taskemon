@@ -2,7 +2,8 @@
 療癒系ToDo夥伴
 
 > 你有拖延症，你不是不行，你只是沒人理解你，讓Taskemon來陪你把事情做完!
-<img width="1437" alt="image" src="https://github.com/user-attachments/assets/5c23c957-ec40-4a7c-889a-c3a4a76c750e" />
+<img width="1273" alt="image" src="https://github.com/user-attachments/assets/6bf93590-a28e-4fbc-bf0c-2381ea6eeb0a" />
+
 
 + [Demo Video on Youtube](https://youtu.be/M3RDVTMVDpE)
 

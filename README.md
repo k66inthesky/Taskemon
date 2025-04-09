@@ -13,6 +13,18 @@
 當你事情做不完感到焦慮，和Taskemon聊天，讓它陪你完成任務，為獎勵這麼棒的你，來紀念一下吧！Taskemon幫你一鍵鑄造NFT。
 
 
+## 概念發想
+> 取自我真實問chatGPT的經驗，它聰明到我認為可以利用來搞一個ai agent專門處理拖延症患者(心理價值+一鍵安排+任務管理+鑄NFT犒賞自己)
+> 可以看看以下他的回答，活潑有趣像個真人撫慰人心，又能幫忙將一切整理，甚至也支援NLP TODO(✅部分，可以自然語言)
+
+![image](https://github.com/user-attachments/assets/b045fb44-a111-481d-bd70-fc0ab75a42db)
+![image](https://github.com/user-attachments/assets/7972a383-e5c1-481e-a072-fd1eb0450d01)
+![image](https://github.com/user-attachments/assets/ff1dab7d-e327-4ccf-8ca7-de4022e1675c)
+![image](https://github.com/user-attachments/assets/cb92883f-de3e-4e3e-b206-a80dfb00d603)
+![image](https://github.com/user-attachments/assets/cf87a45e-7f86-40cb-b0f2-34785ba1c3fa)
+
+
+
 ## 主要功能
 
 1. **整理雜亂思緒** - AI助手幫助整理和規劃任務
@@ -82,17 +94,6 @@ open 4th terminal
 ```
 flow project deploy --network emulator
 ```
-
-## 概念發想
-> 取自我真實問chatGPT的經驗，它聰明到我認為可以利用來搞一個ai agent專門處理拖延症患者(心理價值+一鍵安排+任務管理+鑄NFT犒賞自己)
-> 可以看看以下他的回答，活潑有趣像個真人撫慰人心，又能幫忙將一切整理，甚至也支援NLP TODO(✅部分，可以自然語言)
-
-![image](https://github.com/user-attachments/assets/b045fb44-a111-481d-bd70-fc0ab75a42db)
-![image](https://github.com/user-attachments/assets/7972a383-e5c1-481e-a072-fd1eb0450d01)
-![image](https://github.com/user-attachments/assets/ff1dab7d-e327-4ccf-8ca7-de4022e1675c)
-![image](https://github.com/user-attachments/assets/cb92883f-de3e-4e3e-b206-a80dfb00d603)
-![image](https://github.com/user-attachments/assets/cf87a45e-7f86-40cb-b0f2-34785ba1c3fa)
-
 
 
 ## 精進目標

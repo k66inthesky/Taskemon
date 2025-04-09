@@ -85,6 +85,7 @@ flow project deploy --network emulator
 
 ## 概念發想
 > 取自我真實問chatGPT的經驗，它聰明到我認為可以利用來搞一個ai agent專門處理拖延症患者(心理價值+一鍵安排+任務管理+鑄NFT犒賞自己)
+> 可以看看以下他的回答，活潑有趣像個真人撫慰人心，又能幫忙將一切整理，甚至也支援NLP TODO(✅部分，可以自然語言)
 
 ![image](https://github.com/user-attachments/assets/b045fb44-a111-481d-bd70-fc0ab75a42db)
 ![image](https://github.com/user-attachments/assets/7972a383-e5c1-481e-a072-fd1eb0450d01)

@@ -83,7 +83,7 @@ open 4th terminal
 flow project deploy --network emulator
 ```
 
-## 藍圖
+## 概念發想
 > 取自我真實問chatGPT的經驗，它聰明到我認為可以利用來搞一個ai agent專門處理拖延症患者(心理價值+一鍵安排+任務管理+鑄NFT犒賞自己)
 
 ![image](https://github.com/user-attachments/assets/b045fb44-a111-481d-bd70-fc0ab75a42db)
